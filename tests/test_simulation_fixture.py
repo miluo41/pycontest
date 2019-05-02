@@ -6,7 +6,7 @@ import pytest
 
 
 @pytest.fixture(scope="module")
-def data(request):
+def data(request): #pytest syntax
 
     print("\n create data")
     # initial condition and simulation parameters

@@ -16,6 +16,7 @@ def transport(loc, vel, dt):
         loc = loc + vel * dt
 
     if isinstance(loc, np.ndarray) and isinstance(vel, np.ndarray):
+        loc = loc.astype(np.float32, copy=False)
         vel = vel.astype(np.float32, copy=False)
         loc[:] = loc[:] + vel[:] *dt
     return loc
